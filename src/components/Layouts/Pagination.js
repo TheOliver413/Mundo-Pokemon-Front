@@ -38,7 +38,7 @@ const Pages = styled.p`
 const Pagination = ({ pokemonsPerPage, paginate }) => {
   const pageNumbers = [];
 
-  for (let i = 1; i <= Math.ceil(40 / pokemonsPerPage); i++) {
+  for (let i = 1; i <= Math.ceil(50 / pokemonsPerPage); i++) {
     pageNumbers.push(i);
   }
 

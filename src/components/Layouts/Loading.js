@@ -34,7 +34,7 @@ const Container = styled.div`
 const Loading = () => {
     return (
         <Container>
-            <Load >Loading...</Load>
+            <Load >Cargando...</Load>
 
             <Image src={`${myImage}`} alt="pokemon" />;
 

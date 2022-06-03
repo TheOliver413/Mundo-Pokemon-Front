@@ -19,7 +19,7 @@ padding: 0.5em 1.2em;
 background: #385ca8;
 border: 2px solid;
 border-radius: 30px;
-border-color: #385ca8;
+border-color: #071737;
 position: relative;
 transition: 0.3s;
 display:inline-block;
@@ -36,7 +36,7 @@ const Header = () => {
 
     <Head>
       <Link to={'/pokemon'} >
-        <Text>Pokemon App</Text>
+        <Text>Mundo Pokemon</Text>
       </Link>
     </Head>
   );
