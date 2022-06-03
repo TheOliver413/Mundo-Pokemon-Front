@@ -18,7 +18,7 @@ const OrderByNameAsc = () => {
     <>
       <form
         onSubmit={handleSubmit}>
-        < But type='submit'>Name &darr;</ But>
+        < But type='submit'>Z - A</ But>
 
       </form>
 

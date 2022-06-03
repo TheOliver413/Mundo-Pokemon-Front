@@ -15,7 +15,7 @@ const OrderByAttackAsc = () => {
         <>
             <form
                 onSubmit={handleSubmit}>
-                <But type='submit'>Attack &uarr;</But>
+                <But type='submit'>Ataque ⬆</But>
 
             </form>
 

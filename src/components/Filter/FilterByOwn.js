@@ -16,7 +16,7 @@ const FilterByOwn = () => {
     return (
         <form
             onSubmit={handleSubmit}>
-            <But type='submit'>Pokemons created by users</But>
+            <But type='submit'>Creados</But>
         </form>
 
     );

@@ -119,14 +119,16 @@ const Pokemons = () => {
       <GlobalStyle />
       <Header />
       <Box>
+        {/* <Fieldset>
+          
+        </Fieldset> */}
+
         <Fieldset>
           <OrderByNameAsc />
           <OrderByNameDesc />
           <OrderByAttackAsc />
           <OrderByAttackDesc />
 
-        </Fieldset>
-        <Fieldset>
           <FilterByOwn />
           <FilterByAPI />
           <Types />
@@ -135,7 +137,7 @@ const Pokemons = () => {
       </Box>
 
       <Link to={'/new'}>
-        <Text>New Pokemon</Text>
+        <Text>Crea tu Pokemon</Text>
       </Link>
       <NamePokemon />
 
@@ -161,8 +163,6 @@ const Pokemons = () => {
             paginate={paginate}
           />
           : null
-        
-         
       }
 
     </>

@@ -16,7 +16,7 @@ const ResetFilter = () => {
 
     <form
       onSubmit={handleSubmit}>
-      <But type='submit'>Reset Filters</But>
+      <But type='submit'>🔃</But>
     </form>
 
   );

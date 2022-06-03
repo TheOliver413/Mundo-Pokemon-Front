@@ -15,7 +15,7 @@ const FilterByAPI = () => {
     return (
         <form
             onSubmit={handleSubmit}>
-            <But type='submit'>Original Pokemons</But>
+            <But type='submit'>Pokémons Originales</But>
         </form>
     );
 }
