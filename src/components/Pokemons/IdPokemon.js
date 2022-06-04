@@ -86,16 +86,16 @@ const Type = styled.p`
     font-weight: bolder;
     :hover{
       transform: translateY(0) scale(1.1);
-      color: #6984bd ;
+      color: white;
       transition: 0.3s;
       background:#385ca8;
     }
 `;
 
 const Span = styled.span`
-    color: black;
+    color: white;
     display: block;
-    background-color: #385ba8bf;
+    background-color: #6984bd;
     padding: 1rem 2rem;
     border-radius: 7px;
     font-size: 1.5rem;
@@ -118,6 +118,7 @@ const Box = styled.div`
     grid-template-columns: repeat(3, 1fr);
     margin: 0;
     background-color: #4c608a;
+    color: white;
     border-radius: 15px;
     border: 1px solid black;
 `;
