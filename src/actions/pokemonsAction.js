@@ -26,7 +26,6 @@ export function getPokemonsAction() {
                 payload: res.data
             });
         } catch (error) {
-            // if (error.response?.status !== 404) alert("Something went wrong")
             dispatch({ type: GET_POKEMONS_SUCCESS, payload: null })
         }
     }
@@ -42,7 +41,7 @@ export function getPokemonDetail(id) {
                 payload: res.data
             });
         } catch (error) {
-            if (error.response?.status !== 404) alert("Something went wrong")
+            if (error.response?.status !== 404) alert("Algo salió mal")
             dispatch({ type: GET_POKEMON_DETAIL, payload: null })
         }
     }

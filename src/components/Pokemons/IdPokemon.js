@@ -13,11 +13,11 @@ import img from '../../img/pato.png';
 
 const GlobalStyle = createGlobalStyle`
   body {
-    background: #FAFAA0;
+    background: #385ba8bf;
   }
 `;
 const Container = styled.div`
-    background-color:#B39CD0;
+    background-color:#385ca8;
     display: block;
     margin: 1rem;
     border-radius: 15px;
@@ -44,21 +44,21 @@ const Image = styled.div`
 `;
 
 const Button = styled.button`
-    position: absolute;
-    left: 4%;
-    top: 75%;
-    margin-top: 1rem;
-    padding: 1rem 2rem;
-    border-radius: 7px;
-    font-size: 1.5rem;
-    font-weight: 700;
-    background-color: #00C9A7;
-    color: black;
-    border: 1px solid black;
-    text-decoration: none;
+  margin-top: 5px;
+  color: white;
+  font-size: 20px;
+  padding: 0.5em 1.2em;
+  background: #385ca8;
+  border: 2px solid;
+  border-radius: 30px;
+  border-color: #385ca8;
+  position: relative;
+  transition: 0.3s;
     :hover{
-        transform: translateY(0) scale(1.1);
-        background-color: #F6F83E;
+      color: white ;
+      box-shadow: 0 4px 16px rgb(56, 92, 168,1);
+      transition: 0.3s;
+  }
     }
     @media (min-width: 768px) {
     position: absolute;
@@ -74,17 +74,21 @@ const Tipo = styled.div`
     justify-content: center;
 `;
 const Type = styled.p`
-    margin: 2rem 2rem;
-    background-color: #00C9A7;
-    padding: 1rem 2rem;
-    border-radius: 7px;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    border: 1px solid black;
+    margin: 20px;
+    padding: 0.5em 1.2em;
+    font-size: 50px;
+    text-align: center;
+    padding: 1rem;
+    border-radius:30px;
+    color:white;
+    background-color: #385ca8;
+    transition: 0.3s;
+    font-weight: bolder;
     :hover{
-      -webkit-transform: scale(0.9);
-      transform: scale(0.9);
+      transform: translateY(0) scale(1.1);
+      color: #385ca8 ;
+      transition: 0.3s;
+      background:#f2c105;
     }
 `;
 
@@ -170,9 +174,9 @@ const IdPokemon = () => {
       <div>
         <GlobalStyle />
         <Link to={'/pokemon'}>
-          <Button>&laquo; BACK TO MAIN PAGE</Button>
+          <Button>&laquo; Volver</Button>
         </Link>
-        <Title>Ups.. There isn't a pokemon with that name</Title>
+        <Title>No hay un pokemon con ese nombre</Title>
         <Imagen src={img} alt="pokemon character" />
 
       </div>
