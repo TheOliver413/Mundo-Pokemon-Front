@@ -15,8 +15,14 @@ const Card = styled.div`
     padding: 1rem;
     background-color: #4B4453;
     border-radius: 10px;
+    transition: 0.3s;
     :hover{
-        transform: translateY(0) scale(1.07);
+        transition: 0.3s;
+        -moz-transform: scale(1.3) translate(0px, -10px);
+        -webkit-transform: scale(1.3) translate(0px, -10px);
+        -o-transform: scale(1.3) translate(0px, -10px);
+        -ms-transform: scale(1.3) translate(0px, -10px);
+        transform: scale(1.3) translate(0px, -10px);
     }
 `;
 
@@ -59,7 +65,7 @@ const Type = styled.p`
     padding: 0.5em 1.2em;
     background: #385ca8;
     border: 2px solid;
-    border-radius: 0 30px 30px 0;
+    border-radius: 30px;
     border-color: #385ca8;
     position: relative;
     transition: 0.3s;
