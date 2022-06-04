@@ -65,20 +65,21 @@ const Fieldset = styled.fieldset`
 `;
 
 const Text = styled.p`
-    text-decoration: underline #C197FF;
-    margin: 1rem 1rem;
+    margin: 20px;
+    padding: 0.5em 1.2em;
+    font-size: 50px;
     text-align: center;
     padding: 1rem;
-    font-size: 1.5rem;
-    border: 1px solid #000000;
-    border-radius:5px;
-    box-sizing: border-box;
-    color:#000000;
-    background-color: #C197FF;
+    border-radius:30px;
+    color:white;
+    background-color: #385ca8;
+    transition: 0.3s;
+    font-weight: bolder;
     :hover{
-        transform: translateY(0) scale(1.1);
-        background-color: #95E06C;
-        text-decoration: underline #95E06C;
+      transform: translateY(0) scale(1.1);
+      color: #385ca8 ;
+      transition: 0.3s;
+      background:#f2c105;
     }
     @media (min-width: 768px) {
       font-size: 1.3rem;
@@ -86,7 +87,6 @@ const Text = styled.p`
       position: absolute;
       right: 1%;
       top: 0;
-     
     }
     
 `;

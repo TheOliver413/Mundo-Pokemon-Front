@@ -78,7 +78,7 @@ const NamePokemon = () => {
             name="name"
             type="text"
             value={name}
-            placeholder="Escribe Para Buscar"
+            placeholder="Busca tu Pokemon"
             onChange={handleChange}
           />
           <Button type='submit'>Buscar</Button>

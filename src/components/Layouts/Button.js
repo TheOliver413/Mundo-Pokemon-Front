@@ -17,6 +17,8 @@ export const But = styled.button`
     }
     :hover{
         transform: translateY(0) scale(1.1);
-        background-color: #071737;
+        color: #385ca8 ;
+        transition: 0.3s;
+        background:#f2c105;
     }
 `;
