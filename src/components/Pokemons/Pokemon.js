@@ -53,16 +53,21 @@ const Span = styled.span`
 `;
 
 const Type = styled.p`
-    background-color: #C197FF;
-    border-radius: 5px;
-    font-size: 1.5rem;
-    text-decoration: underline #C197FF;
-    color: black;
-    margin: 0 2rem;
-    padding: 1rem 1.5rem;
+    margin-top: 5px;
+    color: white;
+    font-size: 20px;
+    padding: 0.5em 1.2em;
+    background: #385ca8;
+    border: 2px solid;
+    border-radius: 0 30px 30px 0;
+    border-color: #385ca8;
+    position: relative;
+    transition: 0.3s;
     :hover{
-        background-color: #95E06C;
-        text-decoration: underline #95E06C;
+        color: #385ca8 ;
+        box-shadow: 0 4px 16px rgb(56, 92, 168,1);
+        transition: 0.3s;
+        background:#f2c105;
     }
 `;
 
@@ -72,12 +77,12 @@ const Pokemon = ({ pokemon }) => {
     
     return (
         <div>
-            <Link to={`/pokemon/${id}`}>
+            <Link to={`/pokemon/${id}`} style={{ textDecoration: 'none' }}>
                 <Card>
                     <Text># {id}</Text>
                     <Text>< Span>{name}</ Span></Text>
-                    {img ? <Image src={img} alt="pokemon character" /> :
-                        <Image2 src={myImage} alt="pokemon character" />
+                    {img ? <Image src={img} alt="personaje pokémon" /> :
+                        <Image2 src={myImage} alt="personaje pokémon" />
                     }
                     <Box>
                         <Type >{type[0]}</Type >
