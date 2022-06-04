@@ -81,7 +81,7 @@ const Types = () => {
           name='type'
           onChange={handleChange}
         >
-          <option value="">-- Select a type --</option>
+          <option value="">Seleccione un Tipo</option>
           {
             Array.isArray(types) ? types.map(type => (
               <option
@@ -91,7 +91,7 @@ const Types = () => {
             )) : null
           }
         </Select>
-        <Button type='submit'>Filt</Button>
+        <Button type='submit'>Buscar</Button>
       </Div>
     </form>
 
