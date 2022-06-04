@@ -15,10 +15,12 @@ border-color: #385ca8;
 position: relative;
 transition: 0.3s;
 display:inline-block;
+outline: none;
     :hover{
       transform: translateY(0) scale(1.1);
-      background-color: #071737;
-      color: white;
+      color: #385ca8 ;
+      transition: 0.3s;
+      background:#f2c105;
     }
     @media (min-width: 768px) {
         font-size: 1.5rem;
@@ -36,7 +38,7 @@ border-color: #385ca8;
 position: relative;
 transition: 0.3s;
 display:inline-block;
-
+outline: none;
   `;
 const Div = styled.div`
     margin: 1.5rem .5rem;
