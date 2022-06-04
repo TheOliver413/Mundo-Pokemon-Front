@@ -81,12 +81,12 @@ const Type = styled.p`
     padding: 1rem;
     border-radius:30px;
     color:white;
-    background-color: #f2c105;
+    background-color: #6984bd;
     transition: 0.3s;
     font-weight: bolder;
     :hover{
       transform: translateY(0) scale(1.1);
-      color: #f2c105 ;
+      color: #6984bd ;
       transition: 0.3s;
       background:#385ca8;
     }
@@ -117,7 +117,7 @@ const Box = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin: 0;
-    background-color: #f2c105;
+    background-color: #4c608a;
     border-radius: 15px;
     border: 1px solid black;
 `;
