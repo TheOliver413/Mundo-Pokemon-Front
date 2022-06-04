@@ -48,8 +48,6 @@ const Box = styled.div`
     @media (min-width: 768px) {
     display: grid;
     grid-template-columns: 1fr 2r;
- 
-   
     margin: 1.5rem; 
 }
 `;
@@ -63,8 +61,6 @@ const Fieldset = styled.fieldset`
     @media (min-width: 768px) {
       display: flex;
       justify-content: center;
-
-   
     }
 `;
 
@@ -119,16 +115,15 @@ const Pokemons = () => {
       <GlobalStyle />
       <Header />
       <Box>
-        {/* <Fieldset>
-          
-        </Fieldset> */}
 
         <Fieldset>
           <OrderByNameAsc />
           <OrderByNameDesc />
           <OrderByAttackAsc />
           <OrderByAttackDesc />
+        </Fieldset>
 
+        <Fieldset>
           <FilterByOwn />
           <FilterByAPI />
           <Types />

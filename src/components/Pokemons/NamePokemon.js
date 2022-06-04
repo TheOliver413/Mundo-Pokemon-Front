@@ -16,14 +16,21 @@ const Bar = styled.input`
 `;
 
 const Button = styled.button`  
-    background-color: #C197FF;
-    border: 1px solid #000000;
-    border-radius:5px;
-    font-size: 1.3rem;
-    padding: 1rem 1rem;
+    margin-top: 5px;
+    color: white;
+    font-size: 20px;
+    padding: 0.5em 1.2em;
+    background: #385ca8;
+    border: 2px solid;
+    border-radius: 30px;
+    border-color: #385ca8;
+    position: relative;
+    transition: 0.3s;
     :hover{
-        background-color: #95E06C;
-        text-decoration: underline #95E06C;
+      color: #385ca8 ;
+      box-shadow: 0 4px 16px rgb(56, 92, 168,1);
+      transition: 0.3s;
+      background:#f2c105;
     }
 `;
 
@@ -70,10 +77,10 @@ const NamePokemon = () => {
             name="name"
             type="text"
             value={name}
-            placeholder="Type to search"
+            placeholder="Escribe Para Buscar"
             onChange={handleChange}
           />
-          <Button type='submit'>Search</Button>
+          <Button type='submit'>Buscar</Button>
         </Container>
       </form>
     </div>
