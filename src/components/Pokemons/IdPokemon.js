@@ -76,26 +76,26 @@ const Tipo = styled.div`
 const Type = styled.p`
     margin: 20px;
     padding: 0.5em 1.2em;
-    font-size: 50px;
+    font-size: 20px;
     text-align: center;
     padding: 1rem;
     border-radius:30px;
     color:white;
-    background-color: #385ca8;
+    background-color: #f2c105;
     transition: 0.3s;
     font-weight: bolder;
     :hover{
       transform: translateY(0) scale(1.1);
-      color: #385ca8 ;
+      color: #f2c105 ;
       transition: 0.3s;
-      background:#f2c105;
+      background:#385ca8;
     }
 `;
 
 const Span = styled.span`
     color: black;
     display: block;
-    background-color: #B39CD0;
+    background-color: #385ba8bf;
     padding: 1rem 2rem;
     border-radius: 7px;
     font-size: 1.5rem;
@@ -117,7 +117,7 @@ const Box = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin: 0;
-    background-color: #845EC2;
+    background-color: #f2c105;
     border-radius: 15px;
     border: 1px solid black;
 `;
@@ -200,8 +200,8 @@ const IdPokemon = () => {
         <Container>
 
           <Image>
-            {pokemonDetail.img ? <Img src={pokemonDetail.img} alt="pokemon character" /> :
-              <Image2 src={myImage} alt="pokemon character" />
+            {pokemonDetail.img ? <Img src={pokemonDetail.img} alt="Personaje Pokémon" /> :
+              <Image2 src={myImage} alt="Personaje Pokémon" />
             }
           </Image>
           <Tipo>
@@ -211,18 +211,18 @@ const IdPokemon = () => {
           </Tipo>
           <Box>
             <div>
-              <Text>Name<Span>{pokemonDetail.name}</Span></Text>
-              <Text>HP<Span>{pokemonDetail.HP}</Span></Text>
+              <Text>Nombre<Span>{pokemonDetail.name}</Span></Text>
+              <Text>Vida<Span>{pokemonDetail.HP}</Span></Text>
             </div>
 
             <div>
-              <Text>Attack<Span>{pokemonDetail.attack}</Span></Text>
-              <Text>Defense<Span>{pokemonDetail.defense}</Span></Text>
+              <Text>Ataque<Span>{pokemonDetail.attack}</Span></Text>
+              <Text>Defensa<Span>{pokemonDetail.defense}</Span></Text>
             </div>
 
             <div>
-              <Text>Height<Span>{pokemonDetail.height}</Span></Text>
-              <Text>Weight<Span>{pokemonDetail.weight}</Span></Text>
+              <Text>Altura<Span>{pokemonDetail.height}</Span></Text>
+              <Text>Peso<Span>{pokemonDetail.weight}</Span></Text>
             </div>
           </Box>
         </Container>
