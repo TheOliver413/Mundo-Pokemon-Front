@@ -18,11 +18,11 @@ const Card = styled.div`
     transition: 0.3s;
     :hover{
         transition: 0.3s;
-        -moz-transform: scale(1.3) translate(0px, -10px);
-        -webkit-transform: scale(1.3) translate(0px, -10px);
-        -o-transform: scale(1.3) translate(0px, -10px);
-        -ms-transform: scale(1.3) translate(0px, -10px);
-        transform: scale(1.3) translate(0px, -10px);
+        -moz-transform: scale(1.1) translate(0px, -10px);
+        -webkit-transform: scale(1.1) translate(0px, -10px);
+        -o-transform: scale(1.1) translate(0px, -10px);
+        -ms-transform: scale(1.1) translate(0px, -10px);
+        transform: scale(1.1) translate(0px, -10px);
     }
 `;
 
