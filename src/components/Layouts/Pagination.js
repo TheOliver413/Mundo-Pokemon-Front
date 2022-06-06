@@ -11,18 +11,18 @@ const Nav = styled.div`
 `;
 
 const Link = styled.a`
-    background-color: #C197FF;
+    background-color: #385ca8;
     font-size: 2rem;
     border: 1px solid #000000;
     border-radius: 5px;
     margin: .5rem;
-    padding: .5rem 1rem; 
+    padding: .5rem 1rem;
     text-decoration: none;
-
+    color: white;
 `;
 
 const Pages = styled.p`
-    background-color: #845EC2;
+    background-color: #6984bd;
     font-size: 2rem;
     opacity: 0.6;
     border: 1px solid #000000;
@@ -44,8 +44,7 @@ const Pagination = ({ pokemonsPerPage, paginate }) => {
 
   return (
 
-    <Nav >
-
+    <Nav >   
       {pageNumbers.map(number => (
         <Pages key={number} >
           <Link onClick={() => paginate(number)} href='#!'>
