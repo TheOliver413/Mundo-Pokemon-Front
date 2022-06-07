@@ -114,17 +114,21 @@ const Button = styled.button`
 
 
 const But = styled.button`
-    margin-top: 1rem;
-    border-radius: 7px;
-    font-size: 1.5rem;
-    font-weight: 700;
-    background-color: #00C9A7;
-    color: black;
-    border: 1px solid black;
-    padding: 1rem 2rem;
+    margin-top: 5px;
+    color: white;
+    font-size: 20px;
+    padding: 0.5em 1.2em;
+    background: #385ca8;
+    border: 2px solid;
+    border-radius: 0 30px 30px 0;
+    border-color: #385ca8;
+    position: relative;
+    transition: 0.3s;
     :hover{
-        transform: translateY(0) scale(1.1);
-        background-color: #F6F83E;
+      color: #385ca8 ;
+      box-shadow: 0 4px 16px rgb(56, 92, 168,1);
+      transition: 0.3s;
+      background:#f2c105;
     }
     position: absolute;
         left: 1%;
@@ -181,38 +185,13 @@ const NewPokemon = ({ history }) => {
       return;
     }
 
+    if (healthpoints < 0){
+      alert('No puede ser negativos los puntos de vida')
+      return;
+    }
+
     if (attack === null) {
       alert('El Ataque es obligatorio')
-      return;
-    }
-
-    if (defense === null) {
-      alert('La Defensa es obligatoria')
-      return;
-    }
-
-    if (speed === null) {
-      alert('La Velocidad es obligatoria')
-      return;
-    }
-
-    if (height === null) {
-      alert('La Altura es obligatorio')
-      return;
-    }
-
-    if (weight === null) {
-      alert('El Peso es obligatorio')
-      return;
-    }
-
-    if (healthpoints < 0){
-      alert('No puede ser negativos los puntos de vida')
-      return;
-    }
-
-    if (healthpoints < 0){
-      alert('No puede ser negativos los puntos de vida')
       return;
     }
 
@@ -221,8 +200,18 @@ const NewPokemon = ({ history }) => {
       return;
     }
 
+    if (defense === null) {
+      alert('La Defensa es obligatoria')
+      return;
+    }
+
     if (defense < 0){
       alert('La Defensa no puede ser negativa')
+      return;
+    }
+
+    if (speed === null) {
+      alert('La Velocidad es obligatoria')
       return;
     }
 
@@ -231,8 +220,18 @@ const NewPokemon = ({ history }) => {
       return;
     }
 
+    if (height === null) {
+      alert('La Altura es obligatorio')
+      return;
+    }
+
     if (height < 0){
       alert('La Altura no puede ser negativa')
+      return;
+    }
+
+    if (weight === null) {
+      alert('El Peso es obligatorio')
       return;
     }
 
