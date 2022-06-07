@@ -59,9 +59,9 @@ const Type = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin: 1.5rem;
-    background-color: #C493FF;
+    background-color: #4f618a;
     border-radius: 5px;
-
+    color: white;
 `;
 
 const Input = styled.input`
@@ -83,6 +83,7 @@ const Input = styled.input`
 const CheckBox = styled.input`
     list-style: none;
     float: left;
+    color: white;
 `;
 
 
@@ -171,7 +172,37 @@ const NewPokemon = ({ history }) => {
   const handleSubmit = e => {
     e.preventDefault();
     if (name === '') {
-      alert('El nombre es obligatorio')
+      alert('El Nombre es obligatorio')
+      return;
+    }
+
+    if (healthpoints === '') {
+      alert('Los Puntos de Vida son obligatorios')
+      return;
+    }
+
+    if (attack === '') {
+      alert('El Ataque es obligatorio')
+      return;
+    }
+
+    if (defense === '') {
+      alert('La Defensa es obligatoria')
+      return;
+    }
+
+    if (speed === '') {
+      alert('La Velocidad es obligatoria')
+      return;
+    }
+
+    if (height === '') {
+      alert('La Altura es obligatorio')
+      return;
+    }
+
+    if (weight === '') {
+      alert('El Peso es obligatorio')
       return;
     }
     //name, healthpoints, attack, defense, speed, height, weight, img
