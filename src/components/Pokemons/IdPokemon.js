@@ -44,27 +44,25 @@ const Image = styled.div`
 `;
 
 const Button = styled.button`
-  margin-top: 5px;
-  color: white;
-  font-size: 20px;
-  padding: 0.5em 1.2em;
-  background: #385ca8;
-  border: 2px solid;
-  border-radius: 30px;
-  border-color: #385ca8;
-  position: relative;
+margin-top: 5px;
+color: white;
+font-size: 20px;
+padding: 0.5em 1.2em;
+background: #385ca8;
+border: 2px solid;
+border-radius: 0 30px 30px 0;
+border-color: #385ca8;
+position: relative;
+transition: 0.3s;
+:hover{
+  color: #385ca8 ;
+  box-shadow: 0 4px 16px rgb(56, 92, 168,1);
   transition: 0.3s;
-    :hover{
-      color: white ;
-      box-shadow: 0 4px 16px rgb(56, 92, 168,1);
-      transition: 0.3s;
-  }
-    }
-    @media (min-width: 768px) {
-    position: absolute;
+  background:#f2c105;
+}
+position: absolute;
     left: 1%;
     top: 0;
-    }
 
 `;
 
@@ -196,7 +194,7 @@ const IdPokemon = () => {
         <GlobalStyle />
         <Header />
         <Link to={'/pokemon'}>
-          <Button>&laquo; BACK</Button>
+          <Button>&laquo; Volver</Button>
         </Link>
         <Container>
 
