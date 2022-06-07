@@ -17,17 +17,6 @@ const GlobalStyle = createGlobalStyle`
     background-color: #D9EDDF;
   }
 `;
-const Image = styled.img`
-    width: 200px;
-    height: 200px;
-    :hover{
-        transform: translateY(0) scale(1.1);
-    }
-    @media (min-width: 768px) {
-      width: 480px;
-      height: 500px;
- }
-`;
 
 const Container = styled.div`
     @media (min-width: 768px) {
@@ -46,17 +35,20 @@ const Text = styled.h2`
     margin: 1rem 0;
     text-align: center;
     font-weight: 900;
-    font-size: 2rem;
+    font-size: 4rem;
+    font-family: pokemon;
+    color: white;
 `;
 const Par = styled.p`
     margin: 1rem 0;
     text-align: center;
     font-size: 1.6rem;
+    color: #f2c105;
 `;
 
 const Div = styled.div`
     margin: 1rem 2rem;
-    background-color: #FEFEDF;
+    background: #385ca8;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     @media (min-width: 768px) {
@@ -73,12 +65,15 @@ const Type = styled.div`
 `;
 
 const Input = styled.input`
+    width: 43%;
     margin-left: 2rem;
     margin-bottom: 1rem;
-    font-size: 1.5rem;
-    padding: .5rem;
-    background-color: #C493FF;
-    border: 1px solid #845EC2;
+    margin-top: 5px;
+    padding: 0.5em 1.2em;
+    border: 1px solid #000000;
+    font-size: 15px;
+    background-color: #DDD4E6;
+    outline: none;
     border-radius: 5px;
     ::placeholder { 
     color: black;
@@ -93,29 +88,26 @@ const CheckBox = styled.input`
 
 
 const Advertencia = styled.p`
-    color: red;
+    color: #f2c105;
+    font-size: 20px;
     font-weight: 700;
     text-align: center;
 `;
 const Button = styled.button`
-    background-color: #00C9A7;
-    margin-top: 1rem;
-    padding: 1rem 3rem;
-    border-radius: 7px;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: black;
-    border: 1px solid black;
-    text-decoration: none;
-    margin-left: 35%;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    padding: 0.5em 1.2em;
+    background: #385ca8;
+    border: 2px solid;
+    border-radius:30px;
+    transition: 0.3s;
+ 
     :hover{
-        transform: translateY(0) scale(1.1);
-        background-color: #F6F83E;
-    }
-    @media (min-width: 768px) {
-    position: absolute;
-    top: 87%;
-    right: 65%;
+      color: #385ca8 ;
+      box-shadow: 0 4px 16px rgb(56, 92, 168,1);
+      transition: 0.3s;
+      background:#f2c105;
     }
 `;
 
@@ -173,16 +165,53 @@ const NewPokemon = ({ history }) => {
     setType([
       ...type,
       [e.target.name] = e.target.value
-    ])
+    ]);
   }
 
   const handleSubmit = e => {
     e.preventDefault();
     if (name === '') {
-      alert('The name is obligatory')
+      alert('El nombre es obligatorio')
       return;
     }
-    alert('Pokemon Created!')
+    //name, healthpoints, attack, defense, speed, height, weight, img
+
+    if (healthpoints < 0){
+      alert('No puede ser negativos los puntos de vida')
+      return;
+    }
+
+    if (healthpoints < 0){
+      alert('No puede ser negativos los puntos de vida')
+      return;
+    }
+
+    if (attack < 0){
+      alert('El Ataque no puede ser negativo')
+      return;
+    }
+
+    if (defense < 0){
+      alert('La Defensa no puede ser negativa')
+      return;
+    }
+
+    if (speed < 0){
+      alert('La Velocidad no puede ser negativa')
+      return;
+    }
+
+    if (height < 0){
+      alert('La Altura no puede ser negativa')
+      return;
+    }
+
+    if (weight < 0){
+      alert('El Peso no puede ser negativo')
+      return;
+    }
+
+    alert('El pokemon '+name+' Fue creado exitosamente')
     dispatch(createNewPokemon(pokemon, type))
     history.push('/pokemon');
   }
@@ -194,17 +223,17 @@ const NewPokemon = ({ history }) => {
 
         <GlobalStyle />
         <Link to={'/pokemon'}>
-           <But>&laquo; BACK</But>
+           <But>&laquo; Volver</But>
         </Link>
         <Div>
           <Text>
-            Create your Pokemon
+            Crea tu Pokemon
         </Text>
           <form
             onSubmit={handleSubmit}>
               <Input
                 type="text"
-                placeholder="Name"
+                placeholder="Nombre"
                 onChange={handleChange}
                 name='name'
                 value={name}
@@ -212,21 +241,21 @@ const NewPokemon = ({ history }) => {
 
               <Input
                 type="number"
-                placeholder="Health Points"
+                placeholder="Puntos de Vida"
                 onChange={handleChange}
                 name='healthpoints'
                 value={healthpoints}
               />
               <Input
                 type="number"
-                placeholder="Attack"
+                placeholder="Ataque"
                 onChange={handleChange}
                 name='attack'
                 value={attack}
               />
               <Input
                 type="number"
-                placeholder="Speed"
+                placeholder="Velocidad"
                 onChange={handleChange}
                 name='speed'
                 value={speed}
@@ -234,7 +263,7 @@ const NewPokemon = ({ history }) => {
 
               <Input
                 type="number"
-                placeholder="Defense"
+                placeholder="Defensa"
                 onChange={handleChange}
                 name='defense'
                 value={defense}
@@ -242,7 +271,7 @@ const NewPokemon = ({ history }) => {
 
               <Input
                 type="number"
-                placeholder="Height"
+                placeholder="Altura"
                 onChange={handleChange}
                 name='height'
                 value={height}
@@ -250,22 +279,22 @@ const NewPokemon = ({ history }) => {
 
               <Input
                 type="number"
-                placeholder="Weight"
+                placeholder="Peso"
                 onChange={handleChange}
                 name='weight'
                 value={weight}
               />
               <Input
                 type="url"
-                placeholder="Image url"
+                placeholder="Url de Imagen"
                 onChange={handleChange}
                 name='img'
                 value={img}
               />
-            <Par>Choose a type</Par>
+            <Par>Elige un tipo</Par>
 
             {
-              type.length < 2 ? <Advertencia>You can select only two</Advertencia> : null
+              type.length < 2 ? <Advertencia>Puede seleccionar sólo dos</Advertencia> : null
             }
 
             <Type>
@@ -283,10 +312,10 @@ const NewPokemon = ({ history }) => {
                 )) : null
               }
             </Type>
-            <Button type='submit'>Create</Button>
+            <Button type='submit'>Crear</Button>
           </form>
         </Div>
-        <Image src={`${myImage}`} alt="Pokemon" />
+
       </Container>
     </>
   );

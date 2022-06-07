@@ -11,25 +11,8 @@ body{
   font-family: 'Roboto Slab', serif;  
 
 }
-/* body{
-  background-image: url('./img/ff.png');
-  background-repeat: no-repeat;
-  background-color: #fff176 ;
-  background-size: contain;
-  font-family: 'Roboto Slab', serif;
-} 
-  @media (min-width: 992px) {
-  body{
-    background-image: url('./img/0.png');
-    background-repeat: no-repeat; 
-    background-attachment: fixed;
-    background-size: auto;
-    background-position: center center;
-  }
-}
-   */
 
-   html,body,blockquote,code,h1,h2,h3,h4,h5,h6,p,pre{margin:0;padding:0}
+html,body,blockquote,code,h1,h2,h3,h4,h5,h6,p,pre{margin:0;padding:0}
 button,fieldset,form,input,legend,textarea,select{margin:0;padding:0}
 fieldset{border:0}
 a,a *{cursor:pointer}
