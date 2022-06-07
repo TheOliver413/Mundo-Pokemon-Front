@@ -176,36 +176,35 @@ const NewPokemon = ({ history }) => {
       return;
     }
 
-    if (healthpoints === '') {
+    if (healthpoints === null) {
       alert('Los Puntos de Vida son obligatorios')
       return;
     }
 
-    if (attack === '') {
+    if (attack === null) {
       alert('El Ataque es obligatorio')
       return;
     }
 
-    if (defense === '') {
+    if (defense === null) {
       alert('La Defensa es obligatoria')
       return;
     }
 
-    if (speed === '') {
+    if (speed === null) {
       alert('La Velocidad es obligatoria')
       return;
     }
 
-    if (height === '') {
+    if (height === null) {
       alert('La Altura es obligatorio')
       return;
     }
 
-    if (weight === '') {
+    if (weight === null) {
       alert('El Peso es obligatorio')
       return;
     }
-    //name, healthpoints, attack, defense, speed, height, weight, img
 
     if (healthpoints < 0){
       alert('No puede ser negativos los puntos de vida')
