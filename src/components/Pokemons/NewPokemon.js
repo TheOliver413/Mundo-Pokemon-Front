@@ -5,8 +5,6 @@ import { getType } from '../../actions/typesAction';
 import Header from '../Layouts/Header';
 import styled from 'styled-components';
 
-import myImage from '../../img/pika.png';
-
 import { createGlobalStyle } from 'styled-components'
 import { Link } from 'react-router-dom';
 
@@ -239,8 +237,6 @@ const NewPokemon = ({ history }) => {
       alert('El Peso no puede ser negativo')
       return;
     }
-
-    alert('El pokemon '+name+' Fue creado exitosamente')
     dispatch(createNewPokemon(pokemon, type))
     history.push('/pokemon');
   }

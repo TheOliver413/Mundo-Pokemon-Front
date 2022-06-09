@@ -41,7 +41,7 @@ export function getPokemonDetail(id) {
                 payload: res.data
             });
         } catch (error) {
-            if (error.response?.status !== 404) alert("Algo salió mal")
+            // if (error.response?.status !== 404) alert("Algo salió mal")
             dispatch({ type: GET_POKEMON_DETAIL, payload: null })
         }
     }
