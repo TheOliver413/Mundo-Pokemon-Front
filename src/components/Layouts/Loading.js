@@ -36,7 +36,7 @@ const Loading = () => {
         <Container>
             <Load >Cargando...</Load>
 
-            <Image src={`${myImage}`} alt="pokemon" />;
+            <Image src={`${myImage}`} alt="pokemon" />
 
         </Container>
     );
